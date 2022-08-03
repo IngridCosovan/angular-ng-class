@@ -1,4 +1,13 @@
-<hello name="{{ name }}"></hello>
-<p>
-  Start editing to see some magic happen :)
-</p>
+<!-- 1.CSS classes are applied on an event such as click, blur, mouseover. etc.
+  2. CSS classes are applied depending on the value of a variable in component class. -->
+
+<p></p>
+<div style="display: flex;">
+  <div>
+    <button (click)="downloadFile()">Download</button>
+  </div>
+  <!-- <div class="download" [ngClass]="{'downloading': downloadStatus == 1, 'downloaded': downloadStatus==2}"></div> -->
+  <div class="download"
+  [ngClass]="downloadStatus==1?'downloading':downloadStatus==2?'downloaded' : ''"></div>
+  
+</div>
