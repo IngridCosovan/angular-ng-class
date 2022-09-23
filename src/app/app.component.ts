@@ -16,4 +16,7 @@ export class AppComponent {
       this.downloadStatus = 2;
     }, 2000);
   }
+
+  clsName = 'two';
+  clsNameTwo = 'three';
 }

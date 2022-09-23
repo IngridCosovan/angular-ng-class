@@ -11,3 +11,19 @@
   [ngClass]="downloadStatus==1?'downloading':downloadStatus==2?'downloaded' : ''"></div>
   
 </div>
+<hr>
+<p>Using static class name</p>
+<div [ngClass]="'one'">Learning ngClass</div>
+<hr>
+<p>Using dynamic, from the component</p>
+<div [ngClass]="clsName">Learning ngClass</div>
+<hr>
+
+<p>Array classes to pass more that 1 c</p>
+<div [ngClass]="[clsName, clsNameTwo]">Learning ngClass</div>
+<hr>
+<p>ng class with expression value</p>
+<div [ngClass]="{'one':false, 'two':true}">Learning ngClass</div>
+
+
+
