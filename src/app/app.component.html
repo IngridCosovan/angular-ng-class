@@ -7,23 +7,27 @@
     <button (click)="downloadFile()">Download</button>
   </div>
   <!-- <div class="download" [ngClass]="{'downloading': downloadStatus == 1, 'downloaded': downloadStatus==2}"></div> -->
-  <div class="download"
-  [ngClass]="downloadStatus==1?'downloading':downloadStatus==2?'downloaded' : ''"></div>
-  
+  <div
+    class="download"
+    [ngClass]="
+      downloadStatus == 1
+        ? 'downloading'
+        : downloadStatus == 2
+        ? 'downloaded'
+        : ''
+    "
+  ></div>
 </div>
-<hr>
+<hr />
 <p>Using static class name</p>
 <div [ngClass]="'one'">Learning ngClass</div>
-<hr>
+<hr />
 <p>Using dynamic, from the component</p>
 <div [ngClass]="clsName">Learning ngClass</div>
-<hr>
+<hr />
 
 <p>Array classes to pass more that 1</p>
 <div [ngClass]="[clsName, clsNameTwo]">Learning ngClass</div>
-<hr>
+<hr />
 <p>ng class with expression value</p>
-<div [ngClass]="{'one':false, 'two':true}">Learning ngClass</div>
-
-
-
+<div [ngClass]="{ one: false, two: true }">Learning ngClass</div>
